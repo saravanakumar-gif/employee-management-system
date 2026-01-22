@@ -207,7 +207,7 @@ const EmployeeComponent = () => {
     if (id) {
       updateEmployee(id, employees).then((response) => {
         dispatch({ type: 'Submit' });
-        console.log('✅ Update successful:', response.data);
+        console.log('Update successful:', response.data);
         console.log(' Navigating with message...');
         navigator('/employees', {
           state: { message: 'Employee Updated Successfully!' }
@@ -225,7 +225,7 @@ const EmployeeComponent = () => {
     else {
       createEmployee(employees).then((response) => {
         dispatch({ type: 'Submit' });
-        console.log('✅ Create successful:', response.data);
+        console.log('Create successful:', response.data);
         console.log('Navigating with message...');
         navigator('/employees', {
           state: { message: 'Employee Added Successfully!' }
